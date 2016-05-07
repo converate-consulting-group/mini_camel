@@ -209,7 +209,7 @@ env.dispatch_route(:print_text, with_data: {input: "foobar"})
 ```ruby
 from(:greet).
   desc("Prints each value of an array").
-  process(:input, in: :inputs, with_class: WriteInput)
+  process_each(:input, in: :inputs, with_class: WriteInput)
 
 env.dispatch_route(:greet, with_data: {inputs: ["hello", "world"]})
 # -> "hello"
@@ -237,7 +237,7 @@ The `TransformEach` processor allows you to transform array values and put them 
 ```ruby
 from(:multiply_by_two).
   desc("Multiplies each array entry by two and puts it into a new numbers_multiplied_by_two array.").
-  transform(:number, in: :numbers, to: :numbers_multiplied_by_two, with_class: MultiplyByTwoInteractor).
+  transform_each(:number, in: :numbers, to: :numbers_multiplied_by_two, with_class: MultiplyByTwoInteractor).
   process(:numbers_multiplied_by_two, with_class: PrintInput)
 
 env.dispatch_route(:multiply_by_two, with_data: {numbers: [1,2,3]})
