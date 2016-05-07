@@ -1,5 +1,7 @@
 # MiniCamel
 
+[![Build Status](https://travis-ci.org/converate-consulting-group/mini_camel.svg?branch=master)](https://travis-ci.org/converate-consulting-group/mini_camel)
+
 MiniCamel allows you to perform simple data transformations and combine these transformations to reusable business processes. It is inspired by his big brother [Apache Camel](http://camel.apache.org/index.html "Apache Camel").
 
 ## Basic Usage
